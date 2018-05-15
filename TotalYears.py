@@ -21,6 +21,10 @@ class Dataset:
         unique_results = set(self.column(label))
         count = len(unique_results)
         return count
+    
+f = open("nfl.csv", 'r')
+csvreader = csv.reader(f)
+nfl_data = list(csvreader)    
 
 nfl_dataset = Dataset(nfl_data)
 total_years = nfl_dataset.count_unique('year')
