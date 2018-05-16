@@ -17,10 +17,16 @@ class Dataset:
             column.append(row[index])
         return column
 
-f = open("nfl.csv", 'r')
-csvreader = csv.reader(f)
-nfl_data = list(csvreader)    
+import csv    
     
-nfl_dataset = Dataset(nfl_data)
-year_column = nfl_dataset.column('year')
-player_column = nfl_dataset.column('player')
+def main():    
+    f = open("nfl.csv", 'r')
+    csvreader = csv.reader(f)
+    nfl_data = list(csvreader)    
+    
+    nfl_dataset = Dataset(nfl_data)
+    year_column = nfl_dataset.column('year')
+    player_column = nfl_dataset.column('player')
+    
+if __name__ == '__main__':
+    main()    
