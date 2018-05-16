@@ -25,6 +25,8 @@ class Dataset:
         unique_results = set(self.column(label))
         count = len(unique_results)
         return count
+
+import csv    
     
 def main():
     f = open("nfl.csv", 'r')
